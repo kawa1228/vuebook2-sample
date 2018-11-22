@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <my-component/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/chap5">Chap5</router-link> |
@@ -8,6 +9,16 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import myComponent from "./components/MyComponent.vue";
+export default {
+  components: {
+    "my-component": myComponent
+  }
+};
+</script>
+
 
 <style lang="scss">
 #app {
