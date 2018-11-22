@@ -3,9 +3,10 @@
     <p>
     My Component
     <comp-child
-      v-for="item in list"
+      v-for="(item, index) in list"
       :key="item.id"
       :name="item.name"
+      @childs-event="parentsMethod(index)"
     />
     </p>
   </div>
@@ -25,6 +26,11 @@ export default {
         { id: 3, name: "orange" }
       ]
     };
+  },
+  methods: {
+    parentsMethod: function(index) {
+      console.log(`${index}番目をcatch!`);
+    }
   }
 };
 </script>
