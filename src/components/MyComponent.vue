@@ -2,8 +2,11 @@
   <div class="my-component">
     <p>
     My Component
-    <comp-child val="this is child A"/>
-    <comp-child val="this is child B"/>
+    <comp-child
+      v-for="item in list"
+      :key="item.id"
+      :name="item.name"
+    />
     </p>
   </div>
 </template>
@@ -13,6 +16,15 @@ import CompChild from "./MyCompChild";
 export default {
   components: {
     "comp-child": CompChild
+  },
+  data() {
+    return {
+      list: [
+        { id: 1, name: "apple" },
+        { id: 2, name: "grape" },
+        { id: 3, name: "orange" }
+      ]
+    };
   }
 };
 </script>
