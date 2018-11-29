@@ -6,11 +6,17 @@
     <p>
       <button @click="show = !show">切り替え</button>
     </p>
+    <kawauso-comp/>
   </div>
 </template>
 
 <script>
+import kawausoComponent from "../components/KawausoComp.vue";
+
 export default {
+  components: {
+    "kawauso-comp": kawausoComponent
+  },
   data() {
     return {
       show: true
