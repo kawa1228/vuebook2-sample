@@ -3,6 +3,7 @@
     <ul>
       <li>
         {{ name }}　
+        {{ count }}個　
         <button @click="handleClick"> on </button>
       </li>
     </ul>
@@ -13,11 +14,13 @@
 export default {
   props: {
     val: String,
-    name: String
+    name: String,
+    count: Number,
+    id: Number
   },
   methods: {
     handleClick: function() {
-      this.$emit("childs-event");
+      this.$emit("childs-event", this.id);
     }
   }
 };

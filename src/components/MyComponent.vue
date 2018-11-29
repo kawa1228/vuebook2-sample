@@ -3,10 +3,11 @@
     <p>
     My Component
     <comp-child
-      v-for="(item, index) in list"
+      v-for="item in list"
       :key="item.id"
       :name="item.name"
-      @childs-event="parentsMethod(index)"
+      v-bind="item"
+      @childs-event="parentsMethod"
     />
     </p>
   </div>
@@ -21,15 +22,15 @@ export default {
   data() {
     return {
       list: [
-        { id: 1, name: "apple" },
-        { id: 2, name: "grape" },
-        { id: 3, name: "orange" }
+        { id: 1, name: "apple", count: 10 },
+        { id: 2, name: "grape", count: 15 },
+        { id: 3, name: "orange", count: 20 }
       ]
     };
   },
   methods: {
-    parentsMethod: function(index) {
-      console.log(`${index}番目をcatch!`);
+    parentsMethod: function(id) {
+      console.log(`${id}番目をcatch!`);
     }
   }
 };
