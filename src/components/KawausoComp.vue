@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="kawauso-comp">
     <p>
       <button @click="show = !show">切り替え</button>
     </p>
-    <transition>
+    <transition name="kawauso">
       <img v-show="show" src="../../public/img/icons/kawauso.png" height="60px">
     </transition>
   </div>
@@ -20,12 +20,12 @@ export default {
 </script>
 
 <style lang="sass">
-.v-enter-active, .v-leave-active
+.kawauso-enter-active, .kawauso-leave-active
   transition: opacity 1s, transform 1s
-.v-enter
+.kawauso-enter
   opacity: 0
-  transform: translateY(-20px)
-.v-leave-to
+  transform: translateX(-20px)
+.kawauso-leave-to
   opacity: 0
   transform: translateY(20px)
 </style>

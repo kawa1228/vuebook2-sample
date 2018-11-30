@@ -1,21 +1,19 @@
 <template>
   <div class="chap6">
-    <transition>
-      <h1 v-show="show">This is Chap6 page</h1>
-    </transition>
-    <p>
-      <button @click="show = !show">切り替え</button>
-    </p>
+    <h1>This is Chap6 page</h1>
     <kawauso-comp/>
+    <btn-transition/>
   </div>
 </template>
 
 <script>
 import kawausoComponent from "../components/KawausoComp.vue";
+import btnTransition from "../components/BtnTransition.vue";
 
 export default {
   components: {
-    "kawauso-comp": kawausoComponent
+    "kawauso-comp": kawausoComponent,
+    "btn-transition": btnTransition
   },
   data() {
     return {
@@ -26,8 +24,4 @@ export default {
 </script>
 
 <style lang="sass">
-.v-enter-active, .v-leave-active
-  transition: opacity 1s
-.v-enter, .v-leave-to
-  opacity: 0
 </style>
