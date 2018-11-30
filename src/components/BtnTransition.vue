@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 // へんなスタイル
 .strange-enter-active, .strange-leave-active
   transition: opacity 1s

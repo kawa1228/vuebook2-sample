@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .kawauso-enter-active, .kawauso-leave-active
   transition: opacity 1s, transform 1s
 .kawauso-enter
