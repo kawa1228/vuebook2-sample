@@ -1,18 +1,22 @@
 <template>
   <div class="chap7">
-    <h1>This is Chap7 page</h1>
+    <p>『{{ message }}』</p>
+    <edit-form/>
   </div>
 </template>
 
 <script>
+import editForm from "../components/EditForm.vue";
+
 export default {
-  created() {
-    // console.log(this.$store.state.count);
-    // this.$store.commit("increment");
-    // console.log(this.$store.state.count);
-    console.log(this.$store.getters.max);
-    console.log(this.$store.getters.item(2));
-    console.log(this.$store.getters.name(2));
+  name: "Chap7",
+  components: {
+    "edit-form": editForm
+  },
+  computed: {
+    message() {
+      return this.$store.getters.message;
+    }
   }
 };
 </script>
