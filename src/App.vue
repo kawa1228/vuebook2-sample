@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link>|
       <router-link to="/chap5">Chap5</router-link>|
       <router-link to="/chap6">Chap6</router-link>|
-      <router-link to="/chap7">Chap7</router-link>
+      <router-link to="/chap7">Chap7</router-link>|
+      <router-link to="/chap8">Chap8</router-link>
     </div>
     <router-view/>
   </div>
