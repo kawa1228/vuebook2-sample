@@ -43,6 +43,17 @@ export default new Router({
     {
       path: "/chap8",
       component: () => import("./views/Chap8.vue")
+    },
+    {
+      path: "/chap8/:id(\\d+)",
+      component: () => import("./components/Product.vue"),
+      // パラメーターをpropsとしてわたす
+      props: route => ({ id: Number(route.params.id) })
+    },
+    {
+      path: "/chap9",
+      name: "chap9",
+      component: () => import("./views/Chap9.vue")
     }
   ]
 });
