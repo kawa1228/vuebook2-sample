@@ -54,10 +54,12 @@ ul
   border-radius: 50%
   position: absolute
   top: 45px
-  left: 120px
-  // height: 20px
-
+  left: 90px
   // :nth-of-type(n) 要素ごとに数えたn番目を指定
+.order::before
+  content: '賞'
+  font-size: 1px
+  display: inline-block
 .ranking-item:nth-of-type(odd) .order
   border-color: #d3d3d3
   color: #fff
