@@ -6,7 +6,8 @@
       <router-link to="/chap6">Chap6</router-link>|
       <router-link to="/chap7">Chap7</router-link>|
       <router-link to="/chap8">Chap8</router-link>|
-      <router-link to="/chap9">Chap9</router-link>
+      <router-link to="/chap9">Chap9</router-link>|
+      <router-link to="/chap10">Chap10</router-link>
     </div>
     <router-view/>
   </div>
